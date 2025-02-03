@@ -88,7 +88,7 @@ OblivionLostGame/Intermediate/
 OblivionLostGame/Saved/
 
 # Cache files for the editor to use
-DerivedDataCache/*
+OblivionLostGame/DerivedDataCache/*
 
 #Ignore Textures and Audio folders
 
