@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: AstravenatorAnims.ma
-//Last modified: Thu, Feb 13, 2025 05:47:24 PM
+//Last modified: Fri, Feb 14, 2025 09:03:48 PM
 //Codeset: 1252
 file -rdi 1 -ns "AstravenatorRigSkinned" -rfn "AstravenatorRigSkinnedRN" -op
 		 "v=0;" -typ "mayaAscii" "D:/GitRepos/OblivionLost//Assets/Characters/Creatures/Astravenator/AstravenatorRigSkinned.ma";
@@ -12,6 +12,7 @@ requires "stereoCamera" "10.0";
 requires -dataType "xgmGuideData" -dataType "igmDescriptionData" -dataType "xgmSplineData"
 		 -dataType "xgmMeshData" -dataType "xgmSplineTweakData" -dataType "xgmSplineBoundInfoData"
 		 -dataType "xgmGuideRefData" "xgenToolkit" "1.0";
+requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -19,17 +20,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202405151550-05a853e76d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "60DD7B75-4935-09B2-6118-B69E2E06C159";
+fileInfo "UUID" "F6038E53-4123-6A83-E2CD-54B26E936CF6";
 createNode transform -s -n "persp";
 	rename -uid "642BB404-4907-27B8-8449-6A96D3CA2383";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 110.43895495649882 12.185102686965198 111.7196549348341 ;
-	setAttr ".r" -type "double3" 5.6616472754593232 5081.4000000006336 5.3001395564349167e-16 ;
+	setAttr ".t" -type "double3" 112.71115870840146 18.762776012304656 126.65977120777394 ;
+	setAttr ".r" -type "double3" 3.8616472754588886 5080.2000000002845 -2.602588389306616e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D072F1ED-4BA3-B5CC-55DC-109DF7CDB0D9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 205.86541242903235;
+	setAttr ".coi" 205.86541242901518;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -105,15 +106,15 @@ createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
 	setAttr ".h" 4.5;
 	setAttr ".cs" -type "string" "sRGB";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DBAEDB7F-4E00-5035-72F1-E0A7D21C3FC2";
-	setAttr -s 16 ".lnk";
-	setAttr -s 16 ".slnk";
+	rename -uid "76BD580F-4CD6-DFCA-0448-839DCB93AB5A";
+	setAttr -s 9 ".lnk";
+	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "1C2E251F-4519-9FAE-45C0-2C8F1B554968";
+	rename -uid "F2C7A880-46D5-F96A-775B-D3B091E5B792";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B708689A-4FEF-3E88-0D4A-269F477FB5D5";
+	rename -uid "79751C36-4E75-4FDF-1DB7-67AB613F4206";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9C52EB9E-4512-C582-1B0D-3BBFE4C8BC2C";
+	rename -uid "6338A73B-47E8-BF59-18BA-1EA00B02EE1C";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -121,7 +122,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "F20BC75A-4216-343E-11E0-40AEB4754DCF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "0FD68931-43C9-0F86-E2A7-BC99EED343C6";
+	rename -uid "35433FA0-40E5-9C68-4B8E-B0B3769E80C1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "7745901F-415E-94DA-366B-D3A3BB72455F";
 	setAttr ".g" yes;
@@ -908,102 +909,365 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 	setAttr ".phl[765]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"AstravenatorRigSkinnedRN"
-		"AstravenatorRigSkinnedRN" 0
-		"AstravenatorRigSkinnedRN" 852
-		2 "|AstravenatorRigSkinned:Lights" "visibility" " 0"
-		2 "|AstravenatorRigSkinned:Astravenator" "visibility" " 1"
+		"AstravenatorRigSkinnedRN" 4
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo1" 
 		"visibility" " 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo1|AstravenatorRigSkinned:AstravenatorRetopo1Shape" 
+		"uvPivot" " -type \"double2\" 1.81078243255615234 0.5"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo2" 
 		"visibility" " 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo2|AstravenatorRigSkinned:AstravenatorRetopo2Shape" 
+		"uvPivot" " -type \"double2\" 1.81078243255615234 0.5"
+		"AstravenatorRigSkinnedRN" 962
+		2 "|AstravenatorRigSkinned:Lights" "visibility" " 0"
+		2 "|AstravenatorRigSkinned:Astravenator" "visibility" " 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo|AstravenatorRigSkinned:AstravenatorRetopoShape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo|AstravenatorRigSkinned:AstravenatorRetopoShape" 
+		"uvPivot" " -type \"double2\" 1.81078243255615234 0.5"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:L_Eye_2|AstravenatorRigSkinned:L_Eye_Shape2" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:L_Eye_2|AstravenatorRigSkinned:L_Eye_Shape2" 
+		"uvPivot" " -type \"double2\" 5.73620486259460449 0.36311410367488861"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:L_Eye_1|AstravenatorRigSkinned:L_Eye_Shape1" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:L_Eye_1|AstravenatorRigSkinned:L_Eye_Shape1" 
+		"uvPivot" " -type \"double2\" 5.26564288139343262 0.56115114688873291"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:R_Eye_1|AstravenatorRigSkinned:R_Eye_Shape1" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:R_Eye_1|AstravenatorRigSkinned:R_Eye_Shape1" 
+		"uvPivot" " -type \"double2\" 5.73837780952453613 0.70667636394500732"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:R_Eye_2|AstravenatorRigSkinned:R_Eye_Shape2" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Eyes|AstravenatorRigSkinned:R_Eye_2|AstravenatorRigSkinned:R_Eye_Shape2" 
+		"uvPivot" " -type \"double2\" 5.26336336135864258 0.1895916759967804"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_01|AstravenatorRigSkinned:L_Upper_Tooth_01Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_01|AstravenatorRigSkinned:L_Upper_Tooth_01Shape" 
+		"uvPivot" " -type \"double2\" 4.12640285491943359 0.033107598748756573"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_02|AstravenatorRigSkinned:L_Upper_Tooth_02Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_02|AstravenatorRigSkinned:L_Upper_Tooth_02Shape" 
+		"uvPivot" " -type \"double2\" 4.17615437507629395 0.82242384552955627"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_03|AstravenatorRigSkinned:L_Upper_Tooth_Shape3" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_03|AstravenatorRigSkinned:L_Upper_Tooth_Shape3" 
+		"uvPivot" " -type \"double2\" 4.76340818405151367 0.069887787627521902"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_04|AstravenatorRigSkinned:L_Upper_Tooth_04Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_04|AstravenatorRigSkinned:L_Upper_Tooth_04Shape" 
+		"uvPivot" " -type \"double2\" 4.10180354118347168 0.44795645773410797"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_05|AstravenatorRigSkinned:L_Upper_Tooth_Shape5" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_05|AstravenatorRigSkinned:L_Upper_Tooth_Shape5" 
+		"uvPivot" " -type \"double2\" 4.95177102088928223 0.57253226637840271"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_06|AstravenatorRigSkinned:L_Upper_Tooth_Shape6" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_06|AstravenatorRigSkinned:L_Upper_Tooth_Shape6" 
+		"uvPivot" " -type \"double2\" 4.86290192604064941 0.55914530158042908"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_07|AstravenatorRigSkinned:L_Upper_Tooth_Shape7" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:L_Upper_Teeth|AstravenatorRigSkinned:L_Upper_Tooth_07|AstravenatorRigSkinned:L_Upper_Tooth_Shape7" 
+		"uvPivot" " -type \"double2\" 4.96063756942749023 0.86546158790588379"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_01|AstravenatorRigSkinned:R_Upper_Tooth_01Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_01|AstravenatorRigSkinned:R_Upper_Tooth_01Shape" 
+		"uvPivot" " -type \"double2\" 4.20349979400634766 0.64434343576431274"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_02|AstravenatorRigSkinned:R_Upper_Tooth_02Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_02|AstravenatorRigSkinned:R_Upper_Tooth_02Shape" 
+		"uvPivot" " -type \"double2\" 4.10419750213623047 0.78708577156066895"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_03|AstravenatorRigSkinned:R_Upper_Tooth_Shape3" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_03|AstravenatorRigSkinned:R_Upper_Tooth_Shape3" 
+		"uvPivot" " -type \"double2\" 4.91246175765991211 0.069886552970274352"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_04|AstravenatorRigSkinned:R_Upper_Tooth_04Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_04|AstravenatorRigSkinned:R_Upper_Tooth_04Shape" 
+		"uvPivot" " -type \"double2\" 4.10694313049316406 0.62501055002212524"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_05|AstravenatorRigSkinned:R_Upper_Tooth_Shape5" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_05|AstravenatorRigSkinned:R_Upper_Tooth_Shape5" 
+		"uvPivot" " -type \"double2\" 4.47890782356262207 0.70018601417541504"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_06|AstravenatorRigSkinned:R_Upper_Tooth_Shape6" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_06|AstravenatorRigSkinned:R_Upper_Tooth_Shape6" 
+		"uvPivot" " -type \"double2\" 4.04053068161010742 0.5649535059928894"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_07|AstravenatorRigSkinned:R_Upper_Tooth_Shape7" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Upper_Teeth|AstravenatorRigSkinned:R_Upper_Teeth|AstravenatorRigSkinned:R_Upper_Tooth_07|AstravenatorRigSkinned:R_Upper_Tooth_Shape7" 
+		"uvPivot" " -type \"double2\" 4.05089354515075684 0.85832557082176208"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_01|AstravenatorRigSkinned:L_Lower_Tooth_01Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_01|AstravenatorRigSkinned:L_Lower_Tooth_01Shape" 
+		"uvPivot" " -type \"double2\" 4.97395706176757812 0.21096495538949966"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_02|AstravenatorRigSkinned:L_Lower_Tooth_Shape2" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_02|AstravenatorRigSkinned:L_Lower_Tooth_Shape2" 
+		"uvPivot" " -type \"double2\" 4.975006103515625 0.1501566618680954"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_03|AstravenatorRigSkinned:L_Lower_Tooth_Shape3" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_03|AstravenatorRigSkinned:L_Lower_Tooth_Shape3" 
+		"uvPivot" " -type \"double2\" 4.04558682441711426 0.76273053884506226"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_04|AstravenatorRigSkinned:L_Lower_Tooth_Shape4" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_04|AstravenatorRigSkinned:L_Lower_Tooth_Shape4" 
+		"uvPivot" " -type \"double2\" 4.42176485061645508 0.41219647228717804"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_05|AstravenatorRigSkinned:L_Lower_Tooth_Shape5" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_05|AstravenatorRigSkinned:L_Lower_Tooth_Shape5" 
+		"uvPivot" " -type \"double2\" 4.58226466178894043 0.24812360107898712"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_06|AstravenatorRigSkinned:L_Lower_Tooth_Shape6" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_06|AstravenatorRigSkinned:L_Lower_Tooth_Shape6" 
+		"uvPivot" " -type \"double2\" 4.55720090866088867 0.67217940092086792"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_07|AstravenatorRigSkinned:L_Lower_Tooth_Shape7" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:L_Lower_Teeth|AstravenatorRigSkinned:L_Lower_Tooth_07|AstravenatorRigSkinned:L_Lower_Tooth_Shape7" 
+		"uvPivot" " -type \"double2\" 4.65976691246032715 0.51125368475914001"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_01|AstravenatorRigSkinned:R_Lower_Tooth_01Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_01|AstravenatorRigSkinned:R_Lower_Tooth_01Shape" 
+		"uvPivot" " -type \"double2\" 4.63986992835998535 0.25398652255535126"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_02|AstravenatorRigSkinned:R_Lower_Tooth_Shape2" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_02|AstravenatorRigSkinned:R_Lower_Tooth_Shape2" 
+		"uvPivot" " -type \"double2\" 4.7180180549621582 0.14734711498022079"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_03|AstravenatorRigSkinned:R_Lower_Tooth_Shape3" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_03|AstravenatorRigSkinned:R_Lower_Tooth_Shape3" 
+		"uvPivot" " -type \"double2\" 4.21005964279174805 0.065365421454771422"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_04|AstravenatorRigSkinned:R_Lower_Tooth_Shape4" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_04|AstravenatorRigSkinned:R_Lower_Tooth_Shape4" 
+		"uvPivot" " -type \"double2\" 4.03113985061645508 0.38635991513729095"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_05|AstravenatorRigSkinned:R_Lower_Tooth_Shape5" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_05|AstravenatorRigSkinned:R_Lower_Tooth_Shape5" 
+		"uvPivot" " -type \"double2\" 4.84953474998474121 0.041448430391028523"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_06|AstravenatorRigSkinned:R_Lower_Tooth_Shape6" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_06|AstravenatorRigSkinned:R_Lower_Tooth_Shape6" 
+		"uvPivot" " -type \"double2\" 4.15629458427429199 0.75299811363220215"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_07|AstravenatorRigSkinned:R_Lower_Tooth_Shape7" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Teeth|AstravenatorRigSkinned:Lower_Teeth|AstravenatorRigSkinned:R_Lower_Teeth|AstravenatorRigSkinned:R_Lower_Tooth_07|AstravenatorRigSkinned:R_Lower_Tooth_Shape7" 
+		"uvPivot" " -type \"double2\" 4.86021780967712402 0.6413111686706543"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claw_01|AstravenatorRigSkinned:L_Front_Foot_Claw_Shape1" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claw_01|AstravenatorRigSkinned:L_Front_Foot_Claw_Shape1" 
+		"uvPivot" " -type \"double2\" 4.80503940582275391 0.21953115612268448"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claw_02|AstravenatorRigSkinned:L_Front_Foot_Claw_02Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claw_02|AstravenatorRigSkinned:L_Front_Foot_Claw_02Shape" 
+		"uvPivot" " -type \"double2\" 4.27448415756225586 0.45875480771064758"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claw_03|AstravenatorRigSkinned:L_Front_Foot_Claw_03Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claws|AstravenatorRigSkinned:L_Front_Foot_Claw_03|AstravenatorRigSkinned:L_Front_Foot_Claw_03Shape" 
+		"uvPivot" " -type \"double2\" 4.90090441703796387 0.39872609078884125"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claw_01|AstravenatorRigSkinned:L_Rear_Foot_Claw_Shape1" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claw_01|AstravenatorRigSkinned:L_Rear_Foot_Claw_Shape1" 
+		"uvPivot" " -type \"double2\" 4.66907501220703125 0.38275472819805145"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claw_02|AstravenatorRigSkinned:L_Rear_Foot_Claw_02Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claw_02|AstravenatorRigSkinned:L_Rear_Foot_Claw_02Shape" 
+		"uvPivot" " -type \"double2\" 4.40749168395996094 0.18684138357639313"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claw_03|AstravenatorRigSkinned:L_Rear_Foot_Claw_Shape3" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claws|AstravenatorRigSkinned:L_Rear_Foot_Claw_03|AstravenatorRigSkinned:L_Rear_Foot_Claw_Shape3" 
+		"uvPivot" " -type \"double2\" 4.30218172073364258 0.72766870260238647"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claw_01|AstravenatorRigSkinned:R_Rear_Foot_Claw_Shape1" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claw_01|AstravenatorRigSkinned:R_Rear_Foot_Claw_Shape1" 
+		"uvPivot" " -type \"double2\" 4.56113910675048828 0.10640095642884262"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claw_02|AstravenatorRigSkinned:R_Rear_Foot_Claw_02Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claw_02|AstravenatorRigSkinned:R_Rear_Foot_Claw_02Shape" 
+		"uvPivot" " -type \"double2\" 4.13508224487304688 0.18684169978951104"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claw_03|AstravenatorRigSkinned:R_Rear_Foot_Claw_Shape3" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claws|AstravenatorRigSkinned:R_Rear_Foot_Claw_03|AstravenatorRigSkinned:R_Rear_Foot_Claw_Shape3" 
+		"uvPivot" " -type \"double2\" 4.70822930335998535 0.61582541465759277"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claw_01|AstravenatorRigSkinned:R_Front_Foot_Claw_Shape1" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claw_01|AstravenatorRigSkinned:R_Front_Foot_Claw_Shape1" 
+		"uvPivot" " -type \"double2\" 4.54805517196655273 0.81870421767234802"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claw_02|AstravenatorRigSkinned:R_Front_Foot_Claw_02Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claw_02|AstravenatorRigSkinned:R_Front_Foot_Claw_02Shape" 
+		"uvPivot" " -type \"double2\" 4.51604795455932617 0.4735691249370575"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claw_03|AstravenatorRigSkinned:R_Front_Foot_Claw_03Shape" 
+		"visibility" " -k 0 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claws|AstravenatorRigSkinned:R_Front_Foot_Claw_03|AstravenatorRigSkinned:R_Front_Foot_Claw_03Shape" 
+		"uvPivot" " -type \"double2\" 4.84951257705688477 0.78033816814422607"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Hair" "visibility" 
 		" 0"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Transfrom_Ctrl_Grp|AstravenatorRigSkinned:Transfrom_Ctrl" 
-		"Tail_IKFK" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_01_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_01_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_01_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_01_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_02_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_02_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_02_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_02_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_03_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_03_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_03_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_03_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_04_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_04_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_04_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_04_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_05_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_05_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_05_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_05_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_06_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_06_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_06_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_06_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_07_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_07_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_07_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_07_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_08_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_08_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_08_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_08_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_09_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_09_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_09_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_09_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_10_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_10_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_10_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_10_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_11_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_11_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_11_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_11_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_12_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_12_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_12_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_12_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_13_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_13_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_13_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_13_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_14_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_14_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_14_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_14_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_15_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_15_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_15_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_15_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_16_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_16_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_16_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_16_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_17_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_17_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_17_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_17_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_18_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_18_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_18_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_18_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_19_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_19_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_19_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_19_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_20_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_20_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_20_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_20_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_21_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_21_FK_Ctrl" 
-		"Follow_Translate" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_21_FK_Ctrl_Grp|AstravenatorRigSkinned:Tail_21_FK_Ctrl" 
-		"Follow_Rotate" " -k 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.035065004489610772 -0.0023646732111969977 -22.2319437403929463"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Front_Limb_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 32.54816495582626601"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -2.04889781082583067 0.13585165826644785 -22.29756758930306049"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Front_Limb_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -9.1211304709003931e-06 -1.5662588626723921e-06 32.43628225597449699"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 8.7266067048294218 7.0975095532927881 -23.71499682578760471"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.057223900928997491 -0.014164441549882844 20.80574276816112089"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.32156348461338097 -1.93202329941756434 -18.9006109383479064"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.053393562739032174 11.23109998275604582 16.12199791004627514"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_01_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 3.10730729406830664 -2.90808038215618092 11.66035536551922469"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_01_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.19229949373983315 3.77010062996246242 0.4408432521346079"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_02_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.19393347060704544 0.010399915167859283 14.38352133108361564"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_02_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.0072572961294927107 -0.11774797229420697 -2.20098482158394271"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_03_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -3.52623663375243757 2.48016599784378133 11.30778776872241842"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L__Front_Toe_03_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.036671078532274665 -3.20334501238594127 0.9544772539798424"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -5.57355955918280177 1.61342974477027656 -0.98023981246919401"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.082204205340636813 -0.028209768837651108 30.88270463460168003"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.70118425897067471 -2.80508894412615906 -28.06725911364215875"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt" 
+		"rotate" " -type \"double3\" -5.90723407192466254 -5.74399776964589837 -66.39273303244628721"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_01_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.0062084216541797152 0.0098491747713939908 -0.050413167755119045"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_01_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.013982738610658987 -0.026363567700320317 -37.04255515377805352"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_02_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.0012434188489822179 -0.0043994085451574318 -0.041056828216952543"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_02_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.069222018572858049 0.20434282563040682 -37.14698694692492609"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_03_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.0049365371523731761 -0.018632579443730705 -0.050357455096856879"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R__Front_Toe_03_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.012042510081938605 0.009559330037412191 -41.55533525455528121"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 4.21112314617412142 5.71420792151259427 38.98657854267010237"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 -41.9321778235702638"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.65392824240743319 1.18226027186862814 57.8942582769506231"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.27575724584413369 -2.38189339043951209 -34.61609558482673776"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_01_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 9.88742883853993071 -9.75402041620972504 19.4483366225713219"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_01_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 1.76393741419266759 10.14431150185015085 4.68353271232732737"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_02_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 2.02281709784587527 -1.52483657896485791 27.01154095890335327"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_02_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -0.078247870460645116 1.02148240318114003 -3.22699261262288717"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -7.30405208148277207 6.55944187399417267 24.20992234291655265"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.16392652072701658 -6.53379410567634356 -1.87747058783020893"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -4.80508831591618346 7.06453535480460726 -11.86002817135355514"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -1.3613866974231892e-06 -2.0706635890206192e-06 -3.86572535929674022"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt" 
+		"rotate" " -type \"double3\" 0.0060499716253346698 0.12982463586071094 5.33640709777578159"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt" 
+		"rotate" " -type \"double3\" -8.20013161955207615 2.36875446619197394 5.51093363681843673"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_01_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" -3.706365165788054e-06 5.2172540293664188e-07 1.0056894761388305e-07"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_01_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -2.0812422646915523e-07 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_02_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 7.148341911106696e-08 0 -1.2466700437108542e-09"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_02_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -1.095832889658658e-07 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 3.4869693640794264e-06 0 1.2161355325785021e-07"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -8.66825039637796e-07 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt|AstravenatorRigSkinned:Tail_18_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt|AstravenatorRigSkinned:Tail_18_IK_Jnt|AstravenatorRigSkinned:Tail_19_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt|AstravenatorRigSkinned:Tail_18_IK_Jnt|AstravenatorRigSkinned:Tail_19_IK_Jnt|AstravenatorRigSkinned:Tail_20_IK_Jnt" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_IK_Ctrl_Grp|AstravenatorRigSkinned:Tail_IK_Mid_Ctrl_Grp|AstravenatorRigSkinned:Tail_IK_Mid_Ctrl" 
 		"visibility" " 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Tail_Ctrl_Grp|AstravenatorRigSkinned:Tail_IK_Ctrl_Grp|AstravenatorRigSkinned:Tail_IK_Mid_Ctrl_Grp|AstravenatorRigSkinned:Tail_IK_Mid_Ctrl" 
@@ -1048,8 +1312,6 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		"AstravenatorW2" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Base_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Base_Ctrl_Grp_parentConstraint1" 
 		"Spine_02_CtrlW3" " -k 1"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Ctrl" 
-		"Foot_Roll" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Base_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Base_Ctrl_Grp_parentConstraint1" 
 		"Transfrom_CtrlW0" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Base_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Base_Ctrl_Grp_parentConstraint1" 
@@ -1074,6 +1336,11 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		"AstravenatorW2" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Back_Limb_Ctrl_Grp|AstravenatorRigSkinned:Back_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:R_Back_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:R_Back_Limb_IK_Base_Ctrl_Grp|AstravenatorRigSkinned:R_Back_Limb_IK_Base_Ctrl_Grp_parentConstraint1" 
 		"Hip_CtrlW3" " -k 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Deformers|AstravenatorRigSkinned:Tail_IK_Curve_Grp|AstravenatorRigSkinned:Tail_ikHandle" 
+		"translate" " -type \"double3\" 0 33.25951988135914661 -82.28427746669547105"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Deformers|AstravenatorRigSkinned:Tail_IK_Curve_Grp|AstravenatorRigSkinned:Tail_ikHandle" 
+		"rotate" " -type \"double3\" -89.99999999999972999 85.77039043154638875 89.99999999999627676"
+		
 		2 "AstravenatorRigSkinned:Geo" "displayType" " 2"
 		2 "AstravenatorRigSkinned:Geo" "visibility" " 1"
 		2 "AstravenatorRigSkinned:Joints" "visibility" " 0"
@@ -2731,7 +2998,7 @@ createNode animCurveTL -n "L_Back_Limb_PV_Ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  0 -5.0111824412280015e-16 4 1.3611074073383023e-15
-		 8 -4.693527641573996e-15 12 -4.405248199893689e-15 16 -4.8524915120275475e-15 32 1.7600938068129679e-15;
+		 8 -4.693527641573996e-15 12 -4.4052481998936898e-15 16 -4.8524915120275475e-15 32 1.7600938068129679e-15;
 	setAttr -s 6 ".kit[5]"  1;
 	setAttr -s 6 ".kot[5]"  1;
 	setAttr -s 6 ".kix[5]"  1;
@@ -2854,7 +3121,7 @@ createNode animCurveTL -n "L_Front_Limb_IK_Base_Ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 10 -4.4408920985006262e-16 24 -1.334603185124155e-16
-		 26 -1.126071437448506e-16 32 0;
+		 26 -1.1260714374485058e-16 32 0;
 createNode animCurveTL -n "L_Front_Limb_IK_Base_Ctrl_translateY";
 	rename -uid "477E32CB-424A-4972-7289-D9B860184F9C";
 	setAttr ".tan" 18;
@@ -2922,7 +3189,7 @@ createNode animCurveTL -n "R_Front_Limb_IK_Base_Ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  0 0 10 -4.4408920985006262e-16 24 -1.334603185124155e-16
-		 26 -1.126071437448506e-16 32 0;
+		 26 -1.1260714374485058e-16 32 0;
 createNode animCurveTL -n "R_Front_Limb_IK_Base_Ctrl_translateY";
 	rename -uid "1288DC7F-4BFF-630D-7096-34A2A0A17724";
 	setAttr ".tan" 18;
@@ -6139,6 +6406,7 @@ createNode animCurveTU -n "Neck_02_Ctrl_Follow_Rotate";
 createNode displayLayer -n "RefImage";
 	rename -uid "252D5364-4CC3-1D81-415C-D3BB8DD7F828";
 	setAttr ".dt" 2;
+	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode reference -n "sharedReferenceNode";
@@ -7446,6 +7714,38 @@ createNode animCurveTU -n "Tail_08_FK_Ctrl_Follow_Rotate";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  0 1 16 1 32 1;
+createNode gameFbxExporter -n "gameExporterPreset1";
+	rename -uid "8032A729-45CB-0D36-71E8-05829D9CDCB1";
+	setAttr ".pn" -type "string" "Model Default";
+	setAttr ".ils" yes;
+	setAttr ".ilu" yes;
+	setAttr ".smm" yes;
+	setAttr ".ebm" yes;
+	setAttr ".ich" yes;
+	setAttr ".inc" yes;
+	setAttr ".fv" -type "string" "FBX201800";
+	setAttr ".exp" -type "string" "D:/GitRepos/OblivionLost//Assets/Characters/Creatures/Astravenator";
+	setAttr ".exf" -type "string" "AstravenatorSKM";
+createNode gameFbxExporter -n "gameExporterPreset2";
+	rename -uid "BB022E73-4187-F5FA-8714-95BE5347A405";
+	setAttr ".pn" -type "string" "Anim Default";
+	setAttr ".ils" yes;
+	setAttr ".eti" 2;
+	setAttr ".ac[0].acn" -type "string" "WalkAnim";
+	setAttr ".ac[0].ace" 31;
+	setAttr ".spt" 2;
+	setAttr ".ic" no;
+	setAttr ".ebm" yes;
+	setAttr ".fv" -type "string" "FBX201800";
+	setAttr ".exp" -type "string" "D:/GitRepos/OblivionLost//Assets/Characters/Creatures/Astravenator";
+	setAttr ".exf" -type "string" "";
+createNode gameFbxExporter -n "gameExporterPreset3";
+	rename -uid "D8B6A106-43A7-1D27-8993-B9B6D225B6F5";
+	setAttr ".pn" -type "string" "TE Anim Default";
+	setAttr ".ils" yes;
+	setAttr ".eti" 3;
+	setAttr ".ebm" yes;
+	setAttr ".fv" -type "string" "FBX201800";
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
