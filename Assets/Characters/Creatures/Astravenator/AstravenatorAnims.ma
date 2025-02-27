@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: AstravenatorAnims.ma
-//Last modified: Sun, Feb 23, 2025 05:09:55 PM
+//Last modified: Wed, Feb 26, 2025 05:07:13 PM
 //Codeset: 1252
 file -rdi 1 -ns "AstravenatorRigSkinned" -rfn "AstravenatorRigSkinnedRN" -op
 		 "v=0;" -typ "mayaAscii" "D:/GitRepos/OblivionLost//Assets/Characters/Creatures/Astravenator/AstravenatorRigSkinned.ma";
@@ -21,17 +21,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202405151550-05a853e76d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "4F569146-4D24-7452-56C6-8497B78C994D";
+fileInfo "UUID" "6BC006E9-4C22-1469-CF5D-AEAC1796216C";
 createNode transform -s -n "persp";
 	rename -uid "642BB404-4907-27B8-8449-6A96D3CA2383";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 134.48507601085959 23.001887652577587 151.18908857647415 ;
-	setAttr ".r" -type "double3" 2.6616470218456398 5437.3999999449443 1.2511392810938779e-16 ;
+	setAttr ".t" -type "double3" 152.21850544989368 36.817723749212696 78.908861723662255 ;
+	setAttr ".r" -type "double3" -363.33835290442062 5459.8000000038755 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D072F1ED-4BA3-B5CC-55DC-109DF7CDB0D9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 210.06385868741825;
+	setAttr ".coi" 170.66385935221598;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -941,7 +941,7 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		"visibility" " 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo2|AstravenatorRigSkinned:AstravenatorRetopo2Shape" 
 		"uvPivot" " -type \"double2\" 1.81078243255615234 0.5"
-		"AstravenatorRigSkinnedRN" 1072
+		"AstravenatorRigSkinnedRN" 1096
 		2 "|AstravenatorRigSkinned:Lights" "visibility" " 0"
 		2 "|AstravenatorRigSkinned:Astravenator" "visibility" " 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Geometry|AstravenatorRigSkinned:AstravenatorRetopo|AstravenatorRigSkinned:AstravenatorRetopoShape" 
@@ -1127,16 +1127,43 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Hair" "visibility" 
 		" 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt" 
+		"translate" " -type \"double3\" 4.22845544847736932 4.25862324732134923 2.82915572928520342"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt" 
+		"translateX" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt" 
+		"translateY" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt" 
+		"translateZ" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt" 
 		"rotate" " -type \"double3\" -0.29736206711913116 0.024575873770016042 -21.36520829367507446"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Front_Limb_02_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 24.80241793042043952"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt" 
+		"translate" " -type \"double3\" 4.20599384941140997 4.25861561792718746 -2.86245939979890673"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt" 
+		"translateX" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt" 
+		"translateY" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt" 
+		"translateZ" " -av"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt" 
 		"rotate" " -type \"double3\" -0.29736891169688989 0.024566915778692865 -21.36519032981545507"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Front_Limb_02_IK_Jnt" 
 		"rotate" " -type \"double3\" -6.9744810302708895e-06 -1.1976413188094557e-06 24.80243386590593602"
 		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt" 
+		"translate" " -type \"double3\" 4.86238092346876183 0.60382664697943866 4.57544476354627339"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt" 
+		"translateX" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt" 
+		"translateY" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt" 
+		"translateZ" " -av"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt" 
 		"rotate" " -type \"double3\" 1.91790707629886281 7.90822388053518566 -3.83810732515778685"
 		
@@ -1168,6 +1195,13 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		"rotate" " -type \"double3\" 0.00037729385545454412 -0.0081295395353512476 -0.0061612361435851113"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt" 
+		"translate" " -type \"double3\" 4.82611285724067418 0.60381520288823864 -4.6137083847309821"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt" 
+		"translateY" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt" 
+		"translateZ" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt" 
 		"rotate" " -type \"double3\" 1.96997851449622585 11.29793852973693014 0.94208745108250502"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt" 
@@ -1198,6 +1232,15 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		"rotate" " -type \"double3\" 0.00012105441376908116 -0.0067623714480160631 0.0030526775393474735"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt" 
+		"translate" " -type \"double3\" 0.16740276449664204 -0.48639857274707055 2.97503495216366254"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt" 
+		"translateX" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt" 
+		"translateY" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt" 
+		"translateZ" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt" 
 		"rotate" " -type \"double3\" 1.57369170978526052 -4.5182413650174329 16.95831183840754619"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt" 
@@ -1221,6 +1264,15 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		"rotate" " -type \"double3\" -4.6764329012301368e-06 0 -1.6330463538747903e-07"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_02_IK_Jnt" 
 		"rotate" " -type \"double3\" -2.1227380710655579e-07 0 0"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt" 
+		"translate" " -type \"double3\" 0.16740491026385396 -0.48638522130625716 -2.97502994537356891"
+		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt" 
+		"translateX" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt" 
+		"translateY" " -av"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt" 
+		"translateZ" " -av"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt" 
 		"rotate" " -type \"double3\" 7.101658583595297 -3.06573211589513051 29.11755858396734808"
 		
@@ -1450,6 +1502,8 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		"Toe_Tap_01" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Ctrl" 
 		"Toe_Tap_02" " -k 1"
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Ctrl|AstravenatorRigSkinned:L_Middle_Foot_Inner_Bank_Grp" 
+		"rotateZ" " 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_PV_Ctrl_Grp|AstravenatorRigSkinned:L_Middle_Limb_PV_Ctrl_Grp_Offset|AstravenatorRigSkinned:L_Middle_Limb_PV_Ctrl" 
 		"Operating_Space" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Middle_Limb_Ctrl_Grp|AstravenatorRigSkinned:Middle_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Base_Ctrl_Grp|AstravenatorRigSkinned:R_Middle_Limb_IK_Base_Ctrl" 
@@ -15656,7 +15710,7 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ils" yes;
 	setAttr ".ilu" yes;
 	setAttr ".eti" 2;
-	setAttr -s 7 ".ac";
+	setAttr -s 8 ".ac";
 	setAttr ".ac[0].acn" -type "string" "WalkAnim";
 	setAttr ".ac[0].ace" 31;
 	setAttr ".ac[0].eac" no;
@@ -15684,6 +15738,9 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ac[6].acs" 205;
 	setAttr ".ac[6].ace" 250;
 	setAttr ".ac[6].eac" no;
+	setAttr ".ac[7].acn" -type "string" "IdleAnim03";
+	setAttr ".ac[7].acs" 255;
+	setAttr ".ac[7].ace" 340;
 	setAttr ".spt" 2;
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
