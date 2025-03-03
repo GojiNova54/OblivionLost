@@ -12,19 +12,11 @@
 			]
 		},
 		{
-			"Name": "HoudiniEngine",
-			"Enabled": true
-		},
-		{
 			"Name": "AlembicHairImporter",
 			"Enabled": true
 		},
 		{
 			"Name": "HairStrands",
-			"Enabled": true
-		},
-		{
-			"Name": "GaeaUnrealTools",
 			"Enabled": true
 		},
 		{
@@ -34,6 +26,19 @@
 		{
 			"Name": "Landmass",
 			"Enabled": true
+		},
+		{
+			"Name": "PCG",
+			"Enabled": true
+		},
+		{
+			"Name": "HoudiniEngine",
+			"Enabled": true
+		},
+		{
+			"Name": "DragonIKPlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/3f3985e9eb40414aaabf645791fa4916"
 		}
 	]
 }
