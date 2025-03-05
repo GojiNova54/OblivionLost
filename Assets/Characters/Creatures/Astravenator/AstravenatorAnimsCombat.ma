@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: AstravenatorAnimsCombat.ma
-//Last modified: Tue, Mar 04, 2025 12:28:44 PM
+//Last modified: Wed, Mar 05, 2025 09:21:41 AM
 //Codeset: 1252
 file -rdi 1 -ns "AstravenatorRigSkinned" -rfn "AstravenatorRigSkinnedRN" -op
 		 "v=0;" -typ "mayaAscii" "D:/GitRepos/OblivionLost//Assets/Characters/Creatures/Astravenator/AstravenatorRigSkinned.ma";
@@ -20,17 +20,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202405151550-05a853e76d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "472499BD-4E74-6778-99D3-EA853425FC7E";
+fileInfo "UUID" "22E0B8DE-4351-5EFA-34C1-36A2FC1D66EC";
 createNode transform -s -n "persp";
 	rename -uid "642BB404-4907-27B8-8449-6A96D3CA2383";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 115.01560264556267 36.045437658205053 199.18680979885747 ;
-	setAttr ".r" -type "double3" -362.13835287044861 7946.9999999301426 1.115506239693674e-16 ;
+	setAttr ".t" -type "double3" 63.097452208868589 18.267973593188916 127.83824503211427 ;
+	setAttr ".r" -type "double3" -354.93835287041151 7940.9999999288339 2.1292720140088382e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D072F1ED-4BA3-B5CC-55DC-109DF7CDB0D9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 244.31136925983134;
+	setAttr ".coi" 158.99126175797088;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1126,131 +1126,126 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Hair" "visibility" 
 		" 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.31536546800101306 -0.14965412277438833 -21.58542959822716867"
+		"rotate" " -type \"double3\" 0.37083438395377943 0.010500377742693027 -27.71166264021575998"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:L_Front_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Front_Limb_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 27.92890526392909223"
+		"rotate" " -type \"double3\" 0 0 22.00346783427669806"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -1.63843505872498918 -0.054925411155108295 -21.63964239003668055"
+		"rotate" " -type \"double3\" -0.18818718369421347 0.028361840528228179 -17.51640357818986971"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:Spine_03_Jnt|AstravenatorRigSkinned:R_Front_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Front_Limb_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -7.824416433062875e-06 -1.3435902076636424e-06 27.82494787469686059"
+		"rotate" " -type \"double3\" -5.8039748193267405e-06 -9.9664477210361977e-07 20.63991585767402626"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -2.07691811871645804 0.23637472914174198 22.64136318936569126"
+		"rotate" " -type \"double3\" -9.64658484437647878 6.51775898365426887 -8.20960911126660342"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.024546164419114152 -0.0033854128293375118 8.70557599017865158"
+		"rotate" " -type \"double3\" 0.0087975029080098188 -0.00077743010743369417 3.10031507223335723"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.22576775535005636 -1.62566675515597114 -15.81505597939356278"
+		"rotate" " -type \"double3\" 0.028774348959203215 -0.58541943322303513 -5.63088186785139744"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt" 
-		"rotate" " -type \"double3\" 1.56493444600994036 6.62704616205643759 7.98187002231874931"
+		"rotate" " -type \"double3\" -9.50722029978905603 2.61714961471456675 7.41855091428671631"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_01_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.00054929459699170214 -0.004733313202044921 0.014495088128699256"
+		"rotate" " -type \"double3\" -0.0010194221568442651 -0.0033128160168780407 0.0092877725964150247"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_01_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.0010982908027868639 -0.0078158328655075493 -25.17738226757431264"
+		"rotate" " -type \"double3\" 6.1427866775362754e-05 -0.00082235812854667366 -0.0012040603571970903"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_02_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.001373765240983719 -0.0013834573126139085 0.0093372568752649997"
+		"rotate" " -type \"double3\" -0.0029891649744458607 -0.0031721908979026226 0.0081661522737027422"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_02_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.031831147698740653 0.14310631253408843 -25.24125209352887822"
+		"rotate" " -type \"double3\" 7.9038246152431674e-05 -0.0014329107064393525 -0.00059014107928966508"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_03_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.0022904100364456977 0.0026680477219001475 0.011186838273815556"
+		"rotate" " -type \"double3\" -0.0045975521553644335 -0.001459285609010494 0.0039637436163224068"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:L_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Front_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L__Front_Toe_03_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.002675690789895325 -0.0038633162113055784 -29.54505334367715008"
+		"rotate" " -type \"double3\" 3.7964820710774024e-05 -0.003549132554618624 0.0026935957477971237"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -6.8703090998340004 7.96430202562423073 23.65948373425961648"
+		"rotate" " -type \"double3\" -12.85159555890102467 10.0931447298645427 -2.95858283443417314"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.089943300238674043 -0.033845470497215806 34.24406919384779968"
+		"rotate" " -type \"double3\" -0.019347801417089753 3.4137851210387761e-05 -6.79615726790759389"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt" 
-		"rotate" " -type \"double3\" 3.19475387133540201 -5.27286741077508569 -62.40263363736323754"
+		"rotate" " -type \"double3\" 0.0024742474374261662 0.17164496971658608 1.64850822385954299"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt" 
-		"rotate" " -type \"double3\" -10.16190129401512898 11.79136619109740991 12.18901859665119325"
+		"rotate" " -type \"double3\" -13.73513521926696868 1.95330093839770136 2.36484197662847029"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_01_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.0027062887159595497 -0.0078460666685870092 0.025889090531524449"
+		"rotate" " -type \"double3\" -0.0021856351430286046 -0.0026311142252217162 0.0062967730345389727"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_01_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.0022902171654616888 -0.01007965259233635 -25.18153918054655449"
+		"rotate" " -type \"double3\" 0.00014481906860647369 -0.0034257276796715343 0.0045863679952560677"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_02_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.0059577706728020374 -0.0051158448820607218 0.018958944880673886"
+		"rotate" " -type \"double3\" -0.0046620701118625044 -0.0046036082131795091 0.0067191213465255971"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_02_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.030762677902891038 0.14086933631969084 -25.24367240840122051"
+		"rotate" " -type \"double3\" 0.00011096610594886587 -0.001975132374569435 0.0033061968984656933"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_03_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.0087739696438661873 0.0011719564163061777 0.014626875070935881"
+		"rotate" " -type \"double3\" -0.0064362705515622846 -0.0043570018840208705 -0.001501911291953836"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Spine_01_Jnt|AstravenatorRigSkinned:Spine_02_Jnt|AstravenatorRigSkinned:R_Middle_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Middle_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Front_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R__Front_Toe_03_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.0046228894721720539 -0.0088272175447492926 -29.54024395402298708"
+		"rotate" " -type \"double3\" -0.00015004674182530657 -0.0029963324443118421 0.010001282989532269"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt" 
-		"rotate" " -type \"double3\" 3.05312100806995135 -1.58489204387963256 60.71493700534887239"
+		"rotate" " -type \"double3\" 2.60737604730306316 -7.15913957832342884 17.0487527916345023"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 -38.73751115171028658"
+		"rotate" " -type \"double3\" 0 0 -13.7466175424593704"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.56518655432229459 1.1217105722934273 53.48243644430993271"
+		"rotate" " -type \"double3\" 0.075865381235549395 0.45391722968259507 18.97674389902907066"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt" 
-		"rotate" " -type \"double3\" -6.49201507639807396 -13.67279205795898633 28.82295276126524186"
+		"rotate" " -type \"double3\" 9.58431227433136179 17.97631119731710569 -19.08728022830532822"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_01_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" 3.1289471629018475e-07 -4.4043893917760433e-08 -8.4911440801608085e-09"
+		"rotate" " -type \"double3\" 1.1134981588268834e-06 -1.5673896734051397e-07 -3.0217428258562971e-08"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_01_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.14858603453054214 -0.24075761309645768 -63.36292573307352427"
-		
+		"rotate" " -type \"double3\" 3.7745016404549943e-07 0 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_02_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" 2.4979081537257447e-06 0 -4.3601149008005426e-08"
+		"rotate" " -type \"double3\" -6.268566010588115e-06 0 1.0941822672162932e-07"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_02_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.039739238163977862 0.075776191358046877 -55.34537795368552082"
-		
+		"rotate" " -type \"double3\" 2.9713589133999315e-07 0 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" 3.8420251686057544e-06 0 1.3416647529437176e-07"
+		"rotate" " -type \"double3\" -1.1364601626259421e-05 0 -3.9686063375613555e-07"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:L_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:L_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:L_Back_Toe_03_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.11858742452650975 0.2123964724704121 -58.35109472989076096"
-		
+		"rotate" " -type \"double3\" -4.8366005496760763e-07 0 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt" 
-		"rotate" " -type \"double3\" 10.83751194418532471 -2.09027159301357157 59.14354551453988762"
+		"rotate" " -type \"double3\" -8.78766774701450082 -7.56856833905445292 30.88999511034046463"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -6.6993859759176368e-06 -1.9516295453400407e-05 -32.62092183623745001"
+		"rotate" " -type \"double3\" -6.3859314412231899e-06 -1.6129928050003729e-05 -27.31488588904157666"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt" 
-		"rotate" " -type \"double3\" 0.40944225665081291 0.98758609122577512 45.03605479887286833"
+		"rotate" " -type \"double3\" 0.29155797032951097 0.85376125139852133 37.70949587736463826"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt" 
-		"rotate" " -type \"double3\" -13.17204952522504158 -4.73942409786957519 38.70472836703949326"
+		"rotate" " -type \"double3\" 15.7017538057965389 17.00736787189334009 -30.54930822998828788"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_01_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -5.7619513165104647e-07 8.1107937877084165e-08 1.5634548573576518e-08"
+		"rotate" " -type \"double3\" 6.7936738451351549e-07 -9.5630949435936575e-08 -1.8434038040803179e-08"
 		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_01_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_01_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.11474027174838758 0.18574193562418698 -63.40256938246835716"
-		
+		"rotate" " -type \"double3\" -1.3931130258059133e-06 0 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_02_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -6.627962707851277e-07 0 1.1559159678520456e-08"
+		"rotate" " -type \"double3\" -1.6743434371004164e-05 0 2.9200531142658704e-07"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_02_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_02_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.23924360463734518 0.45446665915591555 -55.25408133780287301"
-		
+		"rotate" " -type \"double3\" 6.8246795314891457e-07 0 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_01_IK_Jnt" 
-		"rotate" " -type \"double3\" -5.7178180295750735e-07 0 -1.9941791706545522e-08"
-		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_02_IK_Jnt" 
-		"rotate" " -type \"double3\" -0.29572102825025542 0.53297455800902271 -58.12951115019578907"
+		"rotate" " -type \"double3\" -2.8291856892977013e-05 -1.0655945694519173e-10 -9.8672310699324606e-07"
 		
+		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:R_Back_Limb_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_02_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_03_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_04_IK_Jnt|AstravenatorRigSkinned:R_Back_Limb_Foot_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_01_IK_Jnt|AstravenatorRigSkinned:R_Back_Toe_03_Knuckle_02_IK_Jnt" 
+		"rotate" " -type \"double3\" -2.2907870540326641e-06 0 0"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 -0.55003662081678428"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt" 
@@ -1258,39 +1253,39 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 -1.40363208452266552"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 -1.51909459906665711"
+		"rotate" " -type \"double3\" 0 0 -1.51909459906617728"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 -0.25855916015396313"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 0.66031742397037985"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 1.51416141890554012"
+		"rotate" " -type \"double3\" 0 0 1.51416141890529898"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 1.33537743610178561"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 1.52052579697202783"
+		"rotate" " -type \"double3\" 0 0 1.52052579697154799"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 2.17985203700187391"
+		"rotate" " -type \"double3\" 0 0 2.17985203700237573"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 1.46874655221112227"
+		"rotate" " -type \"double3\" 0 0 1.46874655221112249"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 1.86144841000103578"
+		"rotate" " -type \"double3\" 0 0 1.86144841000083971"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 0.82257064244318689"
+		"rotate" " -type \"double3\" 0 0 0.82257064244318678"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 0.60539094434785068"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 -0.24446893880349016"
+		"rotate" " -type \"double3\" 0 0 -0.24446893880199927"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 0.98084644978981672"
+		"rotate" " -type \"double3\" 0 0 0.98084644978907343"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 1.65551523354327146"
+		"rotate" " -type \"double3\" 0 0 1.65551523354283114"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt|AstravenatorRigSkinned:Tail_18_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 -2.30516267754465431"
+		"rotate" " -type \"double3\" 0 0 -2.30516267754512905"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt|AstravenatorRigSkinned:Tail_18_IK_Jnt|AstravenatorRigSkinned:Tail_19_IK_Jnt" 
 		"rotate" " -type \"double3\" 0 0 1.15720055069818417"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Skeleton|AstravenatorRigSkinned:Root_Jnt|AstravenatorRigSkinned:COG_Jnt|AstravenatorRigSkinned:Hip_Jnt|AstravenatorRigSkinned:Tail_01_IK_Jnt|AstravenatorRigSkinned:Tail_02_IK_Jnt|AstravenatorRigSkinned:Tail_03_IK_Jnt|AstravenatorRigSkinned:Tail_04_IK_Jnt|AstravenatorRigSkinned:Tail_05_IK_Jnt|AstravenatorRigSkinned:Tail_06_IK_Jnt|AstravenatorRigSkinned:Tail_07_IK_Jnt|AstravenatorRigSkinned:Tail_08_IK_Jnt|AstravenatorRigSkinned:Tail_09_IK_Jnt|AstravenatorRigSkinned:Tail_10_IK_Jnt|AstravenatorRigSkinned:Tail_11_IK_Jnt|AstravenatorRigSkinned:Tail_12_IK_Jnt|AstravenatorRigSkinned:Tail_13_IK_Jnt|AstravenatorRigSkinned:Tail_14_IK_Jnt|AstravenatorRigSkinned:Tail_15_IK_Jnt|AstravenatorRigSkinned:Tail_16_IK_Jnt|AstravenatorRigSkinned:Tail_17_IK_Jnt|AstravenatorRigSkinned:Tail_18_IK_Jnt|AstravenatorRigSkinned:Tail_19_IK_Jnt|AstravenatorRigSkinned:Tail_20_IK_Jnt" 
-		"rotate" " -type \"double3\" 0 0 -1.2839384371456859"
+		"rotate" " -type \"double3\" 0 0 -1.28393843714625389"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Transfrom_Ctrl_Grp|AstravenatorRigSkinned:Transfrom_Ctrl" 
 		"Tail_IKFK" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:COG_Ctrl_Grp|AstravenatorRigSkinned:COG_Ctrl" 
@@ -1512,9 +1507,10 @@ createNode reference -n "AstravenatorRigSkinnedRN";
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Controls|AstravenatorRigSkinned:Back_Limb_Ctrl_Grp|AstravenatorRigSkinned:Back_Limb_IK_Ctrl_Grp|AstravenatorRigSkinned:R_Back_Limb_IK_Main_Ctrl_Grp|AstravenatorRigSkinned:R_Back_Limb_PV_Ctrl_Grp|AstravenatorRigSkinned:R_Back_Limb_PV_Ctrl_Offset_Grp|AstravenatorRigSkinned:R_Back_Limb_PV_Ctrl" 
 		"Operating_Space" " -k 1"
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Deformers|AstravenatorRigSkinned:Tail_IK_Curve_Grp|AstravenatorRigSkinned:Tail_ikHandle" 
-		"translate" " -type \"double3\" 0 36.1361517703614652 -81.86213259533936082"
+		"translate" " -type \"double3\" 10.63398274750900896 23.25172013692458606 -81.31466678044549212"
+		
 		2 "|AstravenatorRigSkinned:Astravenator|AstravenatorRigSkinned:Deformers|AstravenatorRigSkinned:Tail_IK_Curve_Grp|AstravenatorRigSkinned:Tail_ikHandle" 
-		"rotate" " -type \"double3\" -89.99999999999961631 88.96926849922081715 89.99999999999717204"
+		"rotate" " -type \"double3\" 138.6280006365065276 79.5216919341252293 -41.85039224905224842"
 		
 		2 "AstravenatorRigSkinned:Geo" "displayType" " 2"
 		2 "AstravenatorRigSkinned:Geo" "visibility" " 1"
@@ -3147,7 +3143,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "1EBBF2E7-44F6-AB0B-715E-6D8C7F9593FE";
-	setAttr ".b" -type "string" "playbackOptions -min 635 -max 653 -ast 35 -aet 670 ";
+	setAttr ".b" -type "string" "playbackOptions -min 584 -max 595 -ast 35 -aet 670 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "L_Back_Limb_IK_Base_Ctrl_translateX";
 	rename -uid "2148BF54-4A9E-D15D-718A-98AF600A0B5E";
@@ -4610,8 +4606,8 @@ createNode animCurveTL -n "Hip_Ctrl_translateX";
 		 470 0 474 -1.9344525445629133 481 13.369738234100454 483 15.31556077286181 485 15.31556077286181
 		 500 0 505 0 510 -2.8343529164087435 515 -5.2286329236689442 520 -10.284983244708441
 		 523 15.597742114657951 526 16.048765272792181 529 9.9119323096175336 542 0 545 0
-		 565 0.37332071739168876 580 0 584 0 590 -0.3 595 0 600 0 604 0 608 0 612 0 616 0
-		 620 0 624 0 628 0 632 0 635 0 638 0 641 0 644 0 647 0 650 0 653 0;
+		 565 0.37332071739168876 580 0 584 0 590 -0.29999999999999943 595 0 600 0 604 0 608 0
+		 612 0 616 0 620 0 624 0 628 0 632 0 635 0 638 0 641 0 644 0 647 0 650 0 653 0;
 	setAttr -s 122 ".kit[15:121]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 1 1 18 18 18 18 18 18 18 
 		1 18 18 18 18 18 18 1 1 1 1 1 1 18 18 18 18 
@@ -4672,7 +4668,7 @@ createNode animCurveTL -n "Hip_Ctrl_translateY";
 		 463 0 465 0 470 0 474 -0.16924266777813229 481 1.2750433131691687 483 1.6836127861774182
 		 485 1.6836127861774182 500 0 505 0 510 -0.077859370144281875 515 -1.469568876822831
 		 520 -1.3207647269266849 523 1.6032443925566975 526 1.064799115074885 529 -1.5714471735645563
-		 542 0 545 0 565 0.5 580 0 584 0 590 -1.2481384460265601e-17 595 0 600 -2 604 -2.5
+		 542 0 545 0 565 0.5 580 0 584 0 590 6.7293462994312246e-17 595 0 600 -2 604 -2.5
 		 608 -3 612 -1.5 616 -2 620 -2.5 624 -3 628 -1.5 632 -2 635 -2 638 0 641 -1 644 0
 		 647 -3 650 -2 653 -2;
 	setAttr -s 122 ".kit[15:121]"  1 18 18 18 18 18 18 18 
@@ -4744,7 +4740,7 @@ createNode animCurveTL -n "Hip_Ctrl_translateZ";
 		 445 -4.4433646893312239e-15 448 0 452 2.2481741722557308e-16 459 5.1762543929954863e-17
 		 463 0 465 0 470 0 474 0 481 -1.7691968763682151 483 -2.5674035170600731 485 -2.5674035170600731
 		 500 0 505 0 510 0 515 0 520 -0.037868966074990185 523 0.12950823874560072 526 0.12263324376834454
-		 529 0.050669535873732741 542 0 545 0 565 -2.8449465006019636e-16 580 0 584 0 590 8.3266726846886741e-17
+		 529 0.050669535873732741 542 0 545 0 565 -2.8449465006019636e-16 580 0 584 0 590 -0.4331877193135919
 		 595 0 600 -7.5730646901217133e-29 604 -2.7767903863779616e-28 608 -2.9030081312133234e-28
 		 612 -2.9030081312133234e-28 616 -2.9030081312133234e-28 620 -2.9030081312133234e-28
 		 624 -2.9030081312133234e-28 628 -2.9030081312133234e-28 632 -2.9030081312133234e-28
@@ -18793,7 +18789,7 @@ createNode animCurveTA -n "Tail_01_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 10 8 12.000000000000002 16 10 24 12.000000000000002
 		 32 10 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9
-		 584 -9 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8
+		 584 -9 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8
 		 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -18857,7 +18853,7 @@ createNode animCurveTA -n "Tail_02_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -18921,7 +18917,7 @@ createNode animCurveTA -n "Tail_03_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -18985,7 +18981,7 @@ createNode animCurveTA -n "Tail_04_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19049,7 +19045,7 @@ createNode animCurveTA -n "Tail_05_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19113,7 +19109,7 @@ createNode animCurveTA -n "Tail_06_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19177,7 +19173,7 @@ createNode animCurveTA -n "Tail_07_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19241,7 +19237,7 @@ createNode animCurveTA -n "Tail_08_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19305,7 +19301,7 @@ createNode animCurveTA -n "Tail_09_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19369,7 +19365,7 @@ createNode animCurveTA -n "Tail_10_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19433,7 +19429,7 @@ createNode animCurveTA -n "Tail_11_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19497,7 +19493,7 @@ createNode animCurveTA -n "Tail_12_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 -2 16 -1.999999999999998 32 -1.9999999999999964
 		 35 1 38 0.5 44 -1 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9
-		 589 -8.8 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
+		 589 -8.6 595 -9 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9
 		 651 -9 653 -9;
 	setAttr -s 27 ".kit[8:26]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19560,7 +19556,7 @@ createNode animCurveTA -n "Tail_13_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 -2 8 -1.9999999999999993 16 -1.999999999999998
 		 24 -1.9999999999999973 32 -1.9999999999999964 35 1 38 0.5 44 -1 47 1.5000000000000002
-		 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9 600 -9 608 -9 616 -9
+		 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9 600 -9 608 -9 616 -9
 		 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19623,7 +19619,7 @@ createNode animCurveTA -n "Tail_14_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19686,7 +19682,7 @@ createNode animCurveTA -n "Tail_15_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19749,7 +19745,7 @@ createNode animCurveTA -n "Tail_16_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19812,7 +19808,7 @@ createNode animCurveTA -n "Tail_17_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19875,7 +19871,7 @@ createNode animCurveTA -n "Tail_18_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -19938,7 +19934,7 @@ createNode animCurveTA -n "Tail_19_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -20001,7 +19997,7 @@ createNode animCurveTA -n "Tail_20_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -20064,7 +20060,7 @@ createNode animCurveTA -n "Tail_21_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 29 ".ktv[0:28]"  0 3.0000000000000004 8 2.9999999999999982
 		 16 3.0000000000000004 24 3.0000000000000004 32 3.0000000000000004 35 1 38 0.5 44 -1
-		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.8 595 -9
+		 47 1.5000000000000002 50 1 53 1 55 0 545 -9 567 -9.1 580 -9 584 -9 589 -8.6 595 -9
 		 600 -9 608 -9 616 -9 624 -9 632 -9 635 -9 640 -9.3 645 -8.8 648 -9 651 -9 653 -9;
 	setAttr -s 29 ".kit[10:28]"  1 18 18 18 1 18 18 1 
 		18 18 18 18 1 18 18 18 18 18 1;
@@ -22962,6 +22958,7 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ac[17].acn" -type "string" "RangedRunAnim";
 	setAttr ".ac[17].acs" 635;
 	setAttr ".ac[17].ace" 653;
+	setAttr ".ac[17].eac" no;
 	setAttr ".spt" 2;
 	setAttr ".ic" no;
 	setAttr ".ebm" yes;
@@ -23747,8 +23744,8 @@ createNode animCurveTU -n "Tail_IK_Tip_Ctrl_Operating_Space";
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9090648228942847 
 		0 0 0 0 0 0 0.9090648228942847 0 0 0 0 0 0 0 0;
 select -ne :time1;
-	setAttr ".o" 650;
-	setAttr ".unw" 650;
+	setAttr ".o" 584;
+	setAttr ".unw" 584;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
